@@ -1,3 +1,3 @@
 class DessertSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :category, :likes, :picture
 end
