@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }{ name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke'movie: movies.first)
 
+
+
 [{name: "Apple & Blackberry Crumble",
 picture:"https:\/\/www.themealdb.com\/images\/media\/meals\/xvsurr1511719182.jpg",
 "idMeal":"52893",
