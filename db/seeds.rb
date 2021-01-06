@@ -405,3 +405,4 @@ likes: 0
 desserts.each do |dessert_hash|
     Dessert.create(dessert_hash)
 end
+
