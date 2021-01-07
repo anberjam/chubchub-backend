@@ -15,6 +15,12 @@ class DessertsController < ApplicationController
         render json: dessert
     end
 
+    def destroy
+        dessert = Dessert.find(params[:id])
+        dessert.destroy
+        render json: dessert
+    end
+
     private
     def desserts_param
         params.require(:id, :name, :category, :likes, :picture)
