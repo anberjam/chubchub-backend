@@ -7,9 +7,10 @@ Rails.application.routes.draw do
  get '/desserts/:id', to: 'desserts#show'
  
  patch '/desserts/:id', to: 'desserts#updateLikes'
-
+ patch '/desserts/:id', to: 'desserts#update'
  delete '/favorites/:id', to: 'favorites#destroy'
- delete 'desserts/:id', to: 'desserts#destroy'
+ delete '/desserts/:id', to: 'desserts#destroy'
+ post '/desserts', to: 'desserts#create'
 
 end
 
