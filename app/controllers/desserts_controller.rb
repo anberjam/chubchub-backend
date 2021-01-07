@@ -9,7 +9,7 @@ class DessertsController < ApplicationController
         render json: dessert
     end
 
-    def update
+    def updateLikes
         dessert = Dessert.find(params[:id])
         dessert.update({likes: params[:likes]})
         render json: dessert

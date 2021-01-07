@@ -6,7 +6,7 @@ Rails.application.routes.draw do
  post '/favorites', to: 'favorites#create'
  get '/desserts/:id', to: 'desserts#show'
  
- patch '/desserts/:id', to: 'desserts#update'
+ patch '/desserts/:id', to: 'desserts#updateLikes'
 
  delete '/favorites/:id', to: 'favorites#destroy'
  delete 'desserts/:id', to: 'desserts#destroy'
