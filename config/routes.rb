@@ -5,6 +5,7 @@ Rails.application.routes.draw do
  get '/favorites', to: 'favorites#index'
  post '/favorites', to: 'favorites#create'
  get '/desserts/:id', to: 'desserts#show'
+ 
  patch '/desserts/:id', to: 'desserts#update'
 
 end
