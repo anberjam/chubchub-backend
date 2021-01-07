@@ -8,5 +8,7 @@ Rails.application.routes.draw do
  
  patch '/desserts/:id', to: 'desserts#update'
 
+ delete '/favorites/:id', to: 'favorites#destroy'
+
 end
 
