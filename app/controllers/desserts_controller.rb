@@ -11,9 +11,23 @@ class DessertsController < ApplicationController
 
     def update
         dessert = Dessert.find(params[:id])
-        dessert.update({likes: params[:likes]})
+        dessert.update(name: params[:name], category: params[:category], picture: params[:picture], likes: 0)
+        
+        render json: dessert
+        
+    end
+
+    def create 
+        dessert = Dessert.create( name: params[:name], category: params[:category], picture: params[:picture], likes: 0)
         render json: dessert
     end
+
+    def destroy
+        dessert = Dessert.find(params[:id])
+        dessert.destroy
+        render json: dessert
+    end
+
 
     private
     def desserts_param
