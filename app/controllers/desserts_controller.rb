@@ -11,14 +11,20 @@ class DessertsController < ApplicationController
 
     def update
         dessert = Dessert.find(params[:id])
-        dessert.update(name: params[:name], category: params[:category], picture: params[:picture], likes: 0)
+        dessert.update(desserts_param)
         
         render json: dessert
         
     end
 
+    # def updateLikes
+    #     dessert = Dessert.find(params[:id])
+    #     dessert.update({likes: params[:likes]})
+    #     render json: dessert
+    # end
+
     def create 
-        dessert = Dessert.create( name: params[:name], category: params[:category], picture: params[:picture], likes: 0)
+        dessert = Dessert.create(desserts_param)
         render json: dessert
     end
 
@@ -29,8 +35,9 @@ class DessertsController < ApplicationController
     end
 
 
-    private
+private
     def desserts_param
-        params.require(:id, :name, :category, :likes, :picture)
+        params.require(:dessert).permit( :id, :name, :category, :likes, :picture)
     end
+
 end
